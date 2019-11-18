@@ -12,7 +12,7 @@ import goodslist from "./components/goods/goodslist.vue";
 import goodsinfo from "./components/goods/goodsinfo.vue";
 import gooddesc from "./components/goods/gooddesc.vue";
 import goodcomment from "./components/goods/goodcomment.vue";
-
+import login from "./components/subcomponent/login.vue";
 
 
 var outerObj = new VueRouter({
@@ -30,6 +30,7 @@ var outerObj = new VueRouter({
     { path: "/home/goodsinfo/:id", component: goodsinfo },
     { path: "/home/gooddesc/:id", component: gooddesc, name: "gooddesc" },
     { path: "/home/goodcomment/:id", component: goodcomment, name: "goodcomment" },
+    {path:"/home/login",component:login}
   ],
   linkActiveClass: "mui-active",
   scrollBehavior(to, from, savedPosition) {
@@ -42,6 +43,11 @@ var outerObj = new VueRouter({
       }
     }
   }
+})
+
+outerObj.beforeEach((to,from,next) => {
+  console.log(`你从${from.path}来到${to.path}`);
+  next();
 })
 
 export default outerObj

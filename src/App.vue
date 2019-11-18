@@ -10,7 +10,7 @@
     <!-- router-view 区域 -->
     <div class="rv">
       <transition>
-        <router-view ref="rv"></router-view>
+        <router-view ></router-view>
       </transition>
     </div>
 
@@ -23,7 +23,7 @@
         </router-link>
         <router-link class="mui-tab-item-a" to="/member" tag="a">
           <span class="mui-icon mui-icon-contact"></span>
-          <span class="mui-tab-label">会员</span>
+          <span class="mui-tab-label">我的</span>
         </router-link>
         <router-link class="mui-tab-item-a" to="/shopcar" tag="a">
           <span class="mui-icon mui-icon-extra mui-icon-extra-cart">
